@@ -1,0 +1,506 @@
+/* =========================================
+   GENERAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+    line-height: 1.8;
+    background: #f8f5ef;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(20, 50, 35, 0.88),
+            rgba(20, 50, 35, 0.88)
+        ),
+        #244d3a;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #d6c58b;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 8vw, 85px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.tagline {
+    font-size: 20px;
+    max-width: 650px;
+    margin: auto auto 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border: 2px solid white;
+    border-radius: 30px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+    color: #244d3a;
+}
+
+
+/* =========================================
+   PORTRAIT
+========================================= */
+
+.portrait-section {
+    background: #f8f5ef;
+    padding: 70px 20px;
+}
+
+.portrait-container {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.portrait {
+    display: block;
+
+    width: min(100%, 430px);
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    margin-top: 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+}
+
+.image-source {
+    font-size: 13px;
+    color: #777;
+}
+
+.image-source a {
+    color: #315c45;
+}
+
+
+/* =========================================
+   COMMON SECTION STYLES
+========================================= */
+
+section {
+    padding: 90px 20px;
+}
+
+.section-label {
+    color: #8a6d2f;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.2;
+
+    color: #203a2c;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BIOGRAPHY
+========================================= */
+
+.biography {
+    background: white;
+}
+
+.biography p {
+    max-width: 900px;
+
+    margin-bottom: 22px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   SCIENCE SECTION
+========================================= */
+
+.science-section {
+    background: #e7efe8;
+}
+
+.science-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.science-text p {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+.science-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.plant-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.science-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    color: #315c45;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline-section {
+    background: #f8f5ef;
+}
+
+.timeline {
+    max-width: 900px;
+
+    margin: 50px auto 0;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+    border-left: 3px solid #315c45;
+padding-left: 30px;
+
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+
+    width: 15px;
+    height: 15px;
+
+    background: #315c45;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: -9px;
+
+    top: 0;
+}
+
+.timeline-year {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #8a6d2f;
+}
+
+.timeline-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #203a2c;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+    background: #203a2c;
+
+    color: white;
+
+    text-align: center;
+}
+
+blockquote {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+blockquote p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(24px, 4vw, 36px);
+
+    line-height: 1.5;
+
+    font-style: italic;
+}
+
+blockquote cite {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #d6c58b;
+
+    font-style: normal;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LEGACY
+========================================= */
+
+.legacy-section {
+    background: white;
+}
+
+.legacy-section p {
+    max-width: 900px;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   SOURCES
+========================================= */
+
+.sources-section {
+    background: #e7efe8;
+
+    padding: 60px 20px;
+}
+
+.sources-section h2 {
+    font-size: 35px;
+}
+
+.sources-section ul {
+    list-style-position: inside;
+}
+
+.sources-section li {
+    margin-bottom: 10px;
+}
+
+.sources-section a {
+    color: #315c45;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #17271f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    font-size: 14px;
+}
+
+footer p:first-child {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .tagline {
+        font-size: 17px;
+    }
+
+    .science-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        padding-left: 25px;
+    }
+
+    .timeline-year {
+        font-size: 22px;
+    }
+
+    .timeline-content h3 {
+        font-size: 21px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .portrait {
+        max-height: 500px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+}

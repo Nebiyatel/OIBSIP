@@ -493,8 +493,8 @@ function editTask(taskId) {
     editInput.classList.add("edit-input");
 
 
-    // Replace text with inputconst textElement =
-        selectedElement.querySelector(
+    // Replace text with inputconst 
+    textElement = selectedElement.querySelector(
             ".task-text"
         );
 
