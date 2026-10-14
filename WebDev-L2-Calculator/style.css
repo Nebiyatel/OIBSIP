@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    background: #e9eef5;
+}
+
+.calculator {
+    width: 350px;
+    background: #1f2937;
+
+    padding: 20px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.calculator h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Display */
+
+.display-container {
+    background: #111827;
+    color: white;
+
+    min-height: 100px;
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+#previous-display {
+    color: #9ca3af;
+    font-size: 18px;
+    text-align: right;
+    min-height: 25px;
+}
+
+#display {
+    font-size: 35px;
+    text-align: right;
+
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Number buttons */
+
+.number,
+.decimal {
+    background: #374151;
+    color: white;
+}
+
+.number:hover,
+.decimal:hover {
+    background: #4b5563;
+}
+
+/* Operators */
+
+.operator {
+    background: #f59e0b;
+    color: white;
+}
+
+.operator:hover {
+    background: #d97706;
+}
+
+/* Clear */
+
+.clear {
+    background: #ef4444;
+    color: white;
+}
+
+.clear:hover {
+    background: #dc2626;
+}
+
+/* Delete */
+
+.delete {
+    background: #6b7280;
+    color: white;
+}
+
+.delete:hover {
+    background: #4b5563;
+}
+
+/* Equals */
+
+.equals {
+    background: #10b981;
+    color: white;
+
+    grid-row: span 2;
+}
+
+.equals:hover {
+    background: #059669;
+}
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Error message */
+
+.error {
+    color: #f87171 !important;
+}
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        height: 58px;
+    }
+
+    #display {
+        font-size: 30px;
+    }
+}

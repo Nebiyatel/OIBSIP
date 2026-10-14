@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="dashboard-page">
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-top">
+
+                <div>
+
+                    <p class="dashboard-label">
+                        PROTECTED AREA
+                    </p>
+
+                    <h1>
+                        Welcome,
+                        <span id="dashboard-username">
+                            User
+                        </span>! 👋
+                    </h1>
+
+                </div>
+
+
+                <button
+                    id="logout-button"
+                    class="logout-button">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-content">
+
+                <div class="dashboard-icon">
+                    🔒
+                </div>
+
+                <h2>
+                    You are successfully logged in.
+                </h2>
+
+                <p>
+                    This page is protected. Only users with
+                    an active login session can access it.
+                </p>
+
+                <div class="account-info">
+
+                    <h3>
+                        Account Information
+                    </h3>
+
+                    <p>
+                        <strong>Username:</strong>
+                        <span id="user-username"></span>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <span id="user-email"></span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
