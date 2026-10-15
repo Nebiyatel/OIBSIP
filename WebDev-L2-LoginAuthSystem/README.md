@@ -1,105 +1,131 @@
-To-Do List Application 
+Login and Authentication System
 
 1. Project Description
-The To-Do List Application is a web-based task management tool developed using HTML, CSS, and JavaScript.
-It allows users to add tasks, edit task descriptions, mark tasks as completed, and delete tasks. Tasks are organized into Pending and Completed sections to make task management easier.
-The application uses the browser's localStorage to preserve tasks after the page is refreshed.
+The Login and Authentication System is a front-end web application developed using HTML, CSS, and JavaScript.
+It allows users to register an account, log in using their username or email address, access a dashboard, and log out.
+For this assignment, user records and login session information are stored in the browser's localStorage.
+Passwords are hashed using the SHA-256 algorithm before being stored. This project demonstrates basic authentication concepts for educational purposes.
+Security notice: This is a client-side demonstration, not a production-ready authentication system. Secure applications should implement authentication on a server.
 
 2. Features
-Add new tasks
-Display pending tasks
-Display completed tasks
-Mark pending tasks as completed
-Edit existing tasks
-Delete tasks
-Display the number of pending tasks
-Display the number of completed tasks
-Show an empty-state message when a task list has no items
-Record task creation timestamps
-Record task completion timestamps
-Save tasks in localStorage
-Restore saved tasks after refreshing the page
-Responsive user interface
+User Registration
+Register with a username, email address, and password
+Confirm the password
+Validate required fields
+Require a username of at least three characters
+Validate email format
+Require a password of at least eight characters and one number
+Check for duplicate usernames and email addresses
+Store a password hash instead of the original password
+User Login
+Log in using a username or email address
+Validate login credentials
+Display a generic error message when credentials are incorrect
+Create a browser-based login session after successful authentication
+Protected Dashboard
+Display the logged-in user's information
+Redirect users to the login page if no session exists
+Provide a logout button
+Logout
+Clear the current login session
+Redirect the user to the login page
+User Interface
+Responsive design
+Registration form
+Login form
+Dashboard page
+Basic form validation
+User feedback messages
 
 3. Technologies Used
-HTML5: Structures the application interface.
-CSS3: Styles the task lists, buttons, and layout.
-JavaScript: Implements task management and user interactions.
-localStorage: Stores task information in the browser.
+HTML5: Structures the registration, login, and dashboard pages.
+CSS3: Styles the forms and dashboard.
+JavaScript: Implements validation, registration, login, session handling, and logout.
+localStorage: Stores user records and the current session.
+Web Crypto API: Calculates SHA-256 password hashes.
 
 4. Project Structure
-todo-app/
-├── index.html
+authentication-system/
+├── register.html
+├── login.html
+├── dashboard.html
 ├── style.css
-├── script.js
+├── auth.js
 └── README.md
-index.html — Contains the task input form and task list sections.
-style.css — Defines the application's appearance and responsive layout.
-script.js — Handles adding, editing, completing, deleting, and saving tasks.
+register.html — Provides the account registration form.
+login.html — Provides the login form.
+dashboard.html — Displays the protected dashboard.
+style.css — Defines the appearance of all pages.
+auth.js — Implements registration, password hashing, login, session management, and logout.
 README.md — Provides project documentation.
 
 5. How to Run the Project
 Open Visual Studio Code.
-Open the todo-app folder.
-Confirm that all project files are in the same folder.
-Right-click index.html.
+Open the authentication-system folder.
+Ensure all HTML, CSS, and JavaScript files are in the same folder.
+Install the Live Server extension if necessary.
+Right-click register.html.
 Select Open with Live Server.
-The application will open in your browser.
-No backend server or database installation is required.
+The registration page will open in your browser.
+Use Live Server or another localhost development server rather than opening the HTML files directly. The Web Crypto API used for password hashing requires a secure context, which includes localhost in supported browsers.
 
 6. How to Use
-Add a Task
-Enter a task in the input field.
-Click Add Task.
-The task will appear in the Pending section.
-Complete a Task
-Find a task in the Pending section.
-Click its completion button.
-The task will move to the Completed section.
-Edit a Task
-Find the task you want to change.
-Click Edit.
-Update the task description.
-Save your changes.
-Delete a Task
-Find the task you want to remove.
-Click Delete.
-Confirm the deletion if prompted.
-Track Tasks
-The application automatically updates the pending and completed task counts.
-Save Tasks
-Tasks are saved in the browser's localStorage and remain available after a page refresh in the same browser, provided the stored data has not been cleared.
+Step 1: Register
+Open register.html.
+Enter a username and email address.
+Enter a password that has at least eight characters and one number.
+Confirm the password.
+Submit the registration form.
+Step 2: Log In
+Open the login page after successful registration.
+Enter your username or email address.
+Enter your password.
+Submit the login form.
+Step 3: Access the Dashboard
+After successful login, the application redirects you to the dashboard.
+The dashboard displays information about the logged-in user.
+Step 4: Test Dashboard Protection
+Log out.
+Try opening dashboard.html directly.
+The application should redirect you to the login page if the session is missing.
+Step 5: Log Out
+Click the logout button to clear the current session and return to the login page.
 
 7. Data Storage
-The application uses localStorage to store task information, including:
-Task ID
-Task description
-Completion status
-Creation timestamp
-Completion timestamp
-The data is stored locally in the browser rather than in a remote database.
+The application uses localStorage to store:
+Registered usernames
+Registered email addresses
+Password hashes
+Current session information
+Passwords are hashed using SHA-256 before being stored. However, SHA-256 alone is not an appropriate password-storage solution for a real production system.
 
-8. Limitations
-Tasks are stored in the current browser's localStorage.
-Tasks are not automatically synchronized between devices or browsers.
-Clearing the browser's stored site data may remove saved tasks.
+8. Security Limitations
+This implementation is intended for learning and demonstration only.
+Because authentication takes place entirely in the browser:
+Users can inspect or modify localStorage.
+Client-side dashboard protection can be bypassed.
+Password hashes stored in the browser can be accessed.
+Session information is not protected by a server.
+SHA-256 does not provide the password-specific protections of algorithms such as Argon2id, bcrypt, or scrypt.
+A production authentication system should use server-side authentication, HTTPS, secure session cookies, appropriate password hashing, and server-side authorization checks.
 
 9. Learning Outcomes
 This project demonstrates:
-DOM manipulation
-JavaScript functions and event listeners
-Arrays and objects
-Conditional statements
-Dynamic HTML element creation
-Event handling
-Date and time formatting
-Browser localStorage
-Data persistence
-Responsive web design
+Form validation
+JavaScript functions and conditionals
+User registration and login workflows
+Password hashing
+Browser storage
+Session management
+Redirecting between pages
+Basic access-control concepts
+Logout functionality
+Security considerations in web development
 
 10. Demo Video
 Watch the demonstration of this project:
-[Click here to watch the demo](https://youtu.be/7KaDzqoekfE?feature=shared)
- 
- 11. Author
+[Click here to watch the demo](https://youtu.be/7KaDzqoekfE?feature=shared)  
+
+11. Author
 Developed as part of a web development practical assignment.
+
