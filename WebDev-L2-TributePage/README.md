@@ -76,7 +76,7 @@ Please consult the linked sources in the webpage for the relevant biographical d
 
 9. Demo Video
 Watch the demonstration of this project:
-[Click here to watch the demo](PASTE_YOUR_VIDEO_LINK_HERE)
+[Click here to watch the demo](https://youtu.be/XH0bHP8ZAUA?feature=shared)
 
 10. Author
 Developed as part of a web development practical assignment.

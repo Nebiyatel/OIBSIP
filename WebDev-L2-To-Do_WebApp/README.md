@@ -99,7 +99,7 @@ Responsive web design
 
 10. Demo Video
 Watch the demonstration of this project:
-[Click here to watch the demo](PASTE_YOUR_VIDEO_LINK_HERE)
+[Click here to watch the demo](https://youtu.be/Sy4OGPaK3kU?feature=shared)
 
  11. Author
 Developed as part of a web development practical assignment.
